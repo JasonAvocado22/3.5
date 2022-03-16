@@ -25,10 +25,12 @@
         });
         buttonElement.addEventListener("mouseover", function(e){
             console.log("your mouse is on the button");
-        });
-        buttonElement.addEventListener("click", function(e){
+            e.stopPropagation();
+        })
+        buttonElement.addEventListener("mouseout", function(e){
             console.log("your mouse is no longer on the button")
-        });
+            e.stopPropagation();
+        })
     </script>
 </div>
 </body>
