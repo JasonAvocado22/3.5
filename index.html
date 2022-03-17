@@ -25,11 +25,21 @@
         });
         buttonElement.addEventListener("mouseover", function(e){
             console.log("your mouse is on the button");
+
             e.stopPropagation();
         })
         buttonElement.addEventListener("mouseout", function(e){
             console.log("your mouse is no longer on the button")
             e.stopPropagation();
+        })
+        inputElement.addEventListener("focus", function(e) {
+            console.log("You focused on the input!")
+        })
+        inputElement.addEventListener("blur", function(e) {
+            console.log("You stopped focusing on the input!");
+        })
+        documentElement.addEventListener("keydown", function(e) {
+            console.log("You stopped focusing on the input!");
         })
     </script>
 </div>
